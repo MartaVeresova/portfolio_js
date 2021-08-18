@@ -4,7 +4,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
   align-items: flex-start;
   margin-bottom: 20px;
 
@@ -18,9 +18,9 @@
       @include text($colorForForm, 14px, 300, 26px, normal);
       border: none;
       border-bottom: 1px solid $colorForBorderInForm;
-      padding: 5px 0;
+      padding: 5px 0 5px 11px;
       font-family: $textFontFamily;
-      width: 49%;
+      width: 47%;
     }
 
     &:active, :hover, :focus {
@@ -36,7 +36,7 @@
     border: 1px solid $colorForBorderInForm;
     margin: 40px 0 20px 0;
     padding: 11px;
-    width: 95%;
+    width: 96%;
     height: 100px;
     resize: none;
   }
@@ -47,9 +47,9 @@
   }
 
   .btn {
-    @include text($textColorH3andBtn, 14px, 400, 40px, normal);
+    @include text($textColorH3, 14px, 400, 40px, normal);
     font-family: 'Montserrat', sans-serif;
-    background-color: $backgroundColorBtn;
+    background-color: $bgColorBtnSendMessage;
     border: 0 none;
     border-radius: 0;
     height: 40px;
@@ -58,8 +58,10 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
 
+
     &:hover {
-      background-color: #000000
+      @include text($textColorH1, 14px, 400, 40px, normal);
+      background-color: #555555
     }
   }
 }

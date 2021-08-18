@@ -4,9 +4,10 @@ import {Title} from '../common/components/title/Title';
 import {Form} from './form/form/Form';
 import {ContactsData} from './form/contactsData/ContactsData';
 
+
 export const Contacts = () => {
     return (
-        <div className={s.contactsBlock} id="contacts">
+        <div className={s.contactsBlock}>
             <div className={s.contactsContainer}>
                 <Title text={'GET IN TOUCH'}/>
                 <div className={s.formAndData}>
@@ -15,6 +16,6 @@ export const Contacts = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 

@@ -1,0 +1,22 @@
+@import './common/styles/sass/variables';
+
+.App {
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.App {
+  > div {
+    &:nth-child(n) {
+      background-color: $bgPrimary;
+    }
+
+    &:nth-child(2n) {
+      background-color: $bgSecondary;
+    }
+  }
+}
+
+/*.App > div:nth-child(2n+3) {*/
+/*    background:#ffffff;*/
+/*}*/

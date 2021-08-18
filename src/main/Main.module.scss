@@ -4,7 +4,6 @@
 
 .mainBlock {
   min-height: 100vh;
-  //background-color: #1f1f20;
   @include flexable(space-between, center, column);
 
   .container {
@@ -15,19 +14,18 @@
     width: 500px;
     text-align: left;
 
+    h5, span {
+      @include text($textColorH5, 16px, 700, 40px, 1px);
+      margin: 0 0 15px;
+      text-transform: uppercase;
+    }
+
     h1 {
       @include text($textColorH1, 38px, 700, 40px, normal);
       text-transform: uppercase;
       margin: 0 0 15px;
       line-height: 1.1;
     }
-
-    h5 {
-      @include text($textColorH5, 16px, 700, 40px, 1px);
-      margin: 0 0 15px;
-      text-transform: uppercase;
-    }
-
   }
 
   .photo {

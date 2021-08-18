@@ -14,7 +14,7 @@ import imgEight from '../assets/images/gallery-photo-8.jpg'
 
 export const Projects = () => {
     return (
-        <div className={s.projectsBlock} id="projects">
+        <div className={s.projectsBlock}>
             <div className={s.projectsContainer}>
                 <Title text="My projects"/>
                 <div className={s.projects}>

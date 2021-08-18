@@ -11,9 +11,9 @@ export const Skills = () => {
             <div className={s.skillsContainer}>
                 <Title text={'My Skills'}/>
                 <div className={s.skills}>
-                    <Skill title={'DEVELOPMENT'} description={"React, Redux, AXIOS etc"} titleIcon={faLaptopCode}/>
+                    <Skill title={'DEVELOPMENT'} description={"React, Redux, AXIOS, Formic etc"} titleIcon={faLaptopCode}/>
                     <Skill title={'FOUNDATION'} description={"JavaScript, TypeScript, HTML5, CSS3"} titleIcon={faBriefcase}/>
-                    <Skill title={'TESTING'} description={"Unit Tests, SnapShot, Storybook"} titleIcon={faTasks}/>
+                    <Skill title={'TESTING'} description={"Unit Tests, Storybook, SnapShot"} titleIcon={faTasks}/>
                     <Skill title={'DESIGN'} description={"Material UI, Ant-Design etc"} titleIcon={faSketch}/>
                 </div>
             </div>

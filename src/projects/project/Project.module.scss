@@ -2,7 +2,7 @@
 @import './../../common/styles/sass/mixins';
 
 .project {
-  width: 95%;
+  width: 100%;
   margin: 15px 0;
   display: inline-block;
 
@@ -19,7 +19,6 @@
       height: 100%;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-      /* background: rgba(159, 156, 151, 0.8);*/
       opacity: 0;
       -webkit-transition: opacity .25s ease-in-out;
       -o-transition: opacity .25s ease-in-out;
@@ -33,17 +32,17 @@
         padding: 15px;
 
         h3 {
-          @include text($textColorH3andBtn, 24px, 650, 26px, 0.40px);
+          @include text($textColorH3, 24px, 650, 26px, 0.40px);
           text-transform: uppercase;
         }
 
         p {
-          @include text($textColorH3andBtn, 14px, 300, 24px, normal);
+          @include text($textColorPAndBtn, 14px, 300, 24px, normal);
         }
 
         .btn {
           text-decoration: none;
-          border: 1px solid $textColorH3andBtn;
+          border: 1px solid $textColorPAndBtn;
           outline: 0;
           -webkit-transition: .25s;
           -o-transition: .25s;
@@ -51,13 +50,11 @@
           text-transform: uppercase;
           padding: 8px 12px;
           cursor: pointer;
-          @include text($textColorH3andBtn, 14px, 600, 1.42857143, normal);
+          @include text($textColorPAndBtn, 14px, 600, 1.42857143, normal);
 
           &:hover {
-            /*background-color: #303030;
-            border-color: #303030;*/
-            background-color: #2b2b2b;
-            border-color: #2b2b2b;
+            background-color: #252527;
+            border-color: #252527;
           }
         }
       }

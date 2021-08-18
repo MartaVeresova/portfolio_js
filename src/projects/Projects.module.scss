@@ -14,12 +14,12 @@
       column-count: 4;
       margin: 60px 100px 0;
 
-      @media only screen and (max-width: 499px) {
+      @media only screen and (max-width: 579px) {
         column-count: 1;
         margin: 60px 20px 0;
       }
 
-      @media only screen and (min-width: 500px) and (max-width: 830px) {
+      @media only screen and (min-width: 580px) and (max-width: 830px) {
         column-count: 2;
         margin: 60px 20px 0;
       }

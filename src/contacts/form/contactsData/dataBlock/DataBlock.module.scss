@@ -2,7 +2,7 @@
 @import './../../../../common/styles/sass/mixins';
 
 .dataBlock {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: row;
   width: 260px;
@@ -31,11 +31,11 @@
       text-transform: capitalize;
     }
 
-    a, span {
+    a {
       outline: none;
       cursor: pointer;
       text-decoration: none;
-      @include text(#979797, 14px, 400, 14px, normal);
+      @include text(#acacac, 14px, 400, 14px, normal);
     }
   }
 }

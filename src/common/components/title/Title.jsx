@@ -7,5 +7,5 @@ export const Title = ({text}) => {
         <div className={s.title}>
             <h2>{text}</h2>
         </div>
-    );
+    )
 }

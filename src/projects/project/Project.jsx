@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './Project.module.scss';
-import Slide from "react-reveal";
+import Slide from "react-reveal/Slide";
+
 
 export const Project = ({img, description, link, title}) => {
     return (
-        <Slide bottom>
+        <Slide bottom cascade>
             <div className={s.project}>
                 <div className={s.imgBlock} style={{backgroundImage: `url(${img})`}}>
                     <div className={s.overlay}>

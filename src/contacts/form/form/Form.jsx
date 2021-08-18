@@ -10,9 +10,9 @@ export const Form = () => {
                 <input type="email" placeholder="Your Email"/>
             </div>
             <textarea placeholder="Your Message"/>
-            <button className={s.btn}>
+            <button className={s.btn} type='submit'>
                 Send Message
             </button>
         </form>
-    );
+    )
 }

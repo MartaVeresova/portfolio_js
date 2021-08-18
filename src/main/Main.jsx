@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './Main.module.scss';
-import photo from '../assets/images/photo.jpg'
+import photo from '../assets/images/photo.jpg';
+import ReactTypingEffect from 'react-typing-effect';
+
 
 export const Main = () => {
     return (
@@ -9,7 +11,11 @@ export const Main = () => {
                 <div className={s.greeting}>
                     <h5>Hello, my name is</h5>
                     <h1>Marta Veresova</h1>
-                    <h5>Front-end Developer based in #Minsk</h5>
+                    {/*<h5>Frontend Developer based in #Minsk</h5>*/}
+                    <ReactTypingEffect
+                        text='Frontend Developer'
+                        typingDelay={1000}
+                    />
                 </div>
 
                 <div className={s.photo}>

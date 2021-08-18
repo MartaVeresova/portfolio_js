@@ -8,21 +8,19 @@ export const Menu = ({header, items, active, setActive}) => {
 
     const modalRef = useRef(null)
 
-    const onClickOutsideHandler = useCallback(
-        (event) => {
+    const onClickOutsideHandler = useCallback(event => {
             if (active && !(modalRef.current && modalRef.current.contains(event.target))) {
                 setActive(false);
             }
-        },
-        [active, modalRef, setActive]
-    );
+        }, [active, modalRef, setActive]
+    )
 
     useEffect(() => {
-        window.addEventListener('click', onClickOutsideHandler);
+        window.addEventListener('click', onClickOutsideHandler)
         return () => {
-            window.removeEventListener('click', onClickOutsideHandler);
-        };
-    }, [onClickOutsideHandler]);
+            window.removeEventListener('click', onClickOutsideHandler)
+        }
+    }, [onClickOutsideHandler])
 
     const onClick = () => setActive(false)
 
@@ -55,5 +53,5 @@ export const Menu = ({header, items, active, setActive}) => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
