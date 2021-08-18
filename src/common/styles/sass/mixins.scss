@@ -1,6 +1,6 @@
-@import 'variables';
+@import './variables';
 
-@mixin text($color,$fontSize,$fontWeight,$lineHeight, $letterSpacing) {
+@mixin text($color, $fontSize, $fontWeight, $lineHeight, $letterSpacing) {
   color: $color;
   font-size: $fontSize;
   font-weight: $fontWeight;
@@ -8,7 +8,7 @@
   letter-spacing: $letterSpacing;
 }
 
-@mixin flexable($justifyContent,$alignItems, $flexDirection) {
+@mixin flexable($justifyContent, $alignItems, $flexDirection) {
   display: flex;
   justify-content: $justifyContent;
   align-items: $alignItems;

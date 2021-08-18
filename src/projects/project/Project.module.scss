@@ -12,6 +12,7 @@
     @include flexable(center, center, column);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 
     .overlay {
       @include flexable(center, center, column);

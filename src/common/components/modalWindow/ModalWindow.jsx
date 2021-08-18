@@ -12,5 +12,4 @@ export const HiringModal = ({active, setActive, children}) => {
             </div>
         </div>
     )
-
 }

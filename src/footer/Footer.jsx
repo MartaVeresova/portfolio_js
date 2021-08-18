@@ -12,7 +12,7 @@ export const Footer = () => {
 
     return (
         <div className={s.footerBlock}>
-            <p className={s.rights}>©2021 Все права защищены</p>
+            <p className={s.rights}>©2021, All Rights Reserved.</p>
             <ul>
                 {items.map((e, i) => <li key={i}><a href={e.href} target="_blank" rel="noreferrer">{e.title}</a></li>)}
             </ul>

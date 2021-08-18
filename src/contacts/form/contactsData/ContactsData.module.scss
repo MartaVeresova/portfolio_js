@@ -4,6 +4,6 @@
   display: flex;
   @include flexable(space-around, center, column);
   text-align: center;
-  min-width: 240px;
+  min-width: 260px;
   margin-bottom: 30px;
 }

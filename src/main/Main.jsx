@@ -4,7 +4,7 @@ import photo from '../assets/images/photo.jpg'
 
 export const Main = () => {
     return (
-        <div className={s.mainBlock} id="home">
+        <div className={s.mainBlock}>
             <div className={s.container}>
                 <div className={s.greeting}>
                     <h5>Hello, my name is</h5>

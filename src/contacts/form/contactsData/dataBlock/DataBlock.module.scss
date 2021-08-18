@@ -5,22 +5,9 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  width: 240px;
+  width: 260px;
   align-items: center;
   text-align: left;
-
-  h4 {
-    @include text($textColorH4, 18px, 400, 20px, normal);
-    margin: 0;
-    text-transform: capitalize;
-  }
-
-  a, span {
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;
-    @include text(#979797, 14px, 400, 14px, normal);
-  }
 
   .icon {
     border: 1px solid #a8a8a8;
@@ -37,5 +24,18 @@
   .description {
     display: flex;
     flex-direction: column;
+
+    h4 {
+      @include text($textColorH4, 18px, 400, 20px, normal);
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    a, span {
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+      @include text(#979797, 14px, 400, 14px, normal);
+    }
   }
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import s from './Nav.module.scss';
 import {Link} from "react-scroll";
+import {BurgerMenu} from "./burgerMenu/BurgerMenu";
+
 
 export const Nav = () => {
-
     const items = ['home', 'skills', 'projects', 'contacts']
 
     return (
@@ -23,7 +24,7 @@ export const Nav = () => {
                         {item}
                     </Link>
                 )}
-                {/*<BurgerMenu items={items}/>*/}
+                <BurgerMenu items={items}/>
             </div>
         </div>
     );

@@ -13,13 +13,6 @@ export const Contacts = () => {
                     <ContactsData/>
                     <Form/>
                 </div>
-
-                {/*<form className={s.contactsForm} action="">*/}
-                {/*    <input type="text" name="firstName" value="Mickey"/>*/}
-                {/*    <input type="text" name="lastName" value="Mouse"/>*/}
-                {/*    <textarea />*/}
-                {/*    <input type="submit" value="Отправить"/>*/}
-                {/*</form>*/}
             </div>
         </div>
     );

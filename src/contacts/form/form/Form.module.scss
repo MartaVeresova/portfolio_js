@@ -19,7 +19,7 @@
       border: none;
       border-bottom: 1px solid $colorForBorderInForm;
       padding: 5px 0;
-      font-family: $fontFamily;
+      font-family: $textFontFamily;
       width: 49%;
     }
 
@@ -31,7 +31,7 @@
 
   textarea {
     @include text($colorForForm, 14px, 300, 26px, normal);
-    font-family: $fontFamily;
+    font-family: $textFontFamily;
     max-height: 300px;
     border: 1px solid $colorForBorderInForm;
     margin: 40px 0 20px 0;
