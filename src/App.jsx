@@ -7,6 +7,7 @@ import {Contacts} from "./contacts/Contacts";
 import {Footer} from "./footer/Footer";
 import s from './App.module.scss';
 
+
 function App() {
   return (
       <div className={s.App}>

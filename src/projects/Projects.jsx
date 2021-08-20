@@ -13,8 +13,9 @@ import imgEight from '../assets/images/gallery-photo-8.jpg'
 
 
 export const Projects = () => {
+
     return (
-        <div className={s.projectsBlock}>
+        <div className={s.projectsBlock} id='projects'>
             <div className={s.projectsContainer}>
                 <Title text="My projects"/>
                 <div className={s.projects}>
@@ -40,7 +41,7 @@ export const Projects = () => {
                         img={imgFour}
                         // description={"App for learning some cards"}
                         description={"TS, Redux, RestAPI, Axios, Thunk, Formik, Material UI, "}
-                        link={""}/>
+                        link={"https://MartaVeresova.github.io/card_training"}/>
 
                     <Project
                         title={"Currency exchange"}

@@ -7,8 +7,10 @@
   text-transform: uppercase;
   position: relative;
 
+
   h2 {
-    margin: 0 0 15px;;
+    margin: 0 0 15px;
+    line-height: 1.0;
   }
 
   &::before {

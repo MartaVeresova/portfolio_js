@@ -1,6 +1,10 @@
 @import './../../../common/styles/sass/variables';
 @import './../../../common/styles/sass/mixins';
 
+.sendMessageModal {
+  position: absolute;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -23,6 +27,19 @@
       width: 47%;
     }
 
+    //input[type="text"]::-webkit-input-placeholder:invalid {
+    //  color: red;
+    //}
+    //
+    //input[type="text"]::-moz-placeholder {
+    //  color: red;
+    //}
+    //
+    //input[type='email']:valid { color: $colorForForm; }
+    //input[type='email']:invalid { color: red; }
+    //
+
+
     &:active, :hover, :focus {
       outline: none;
       outline-offset: 0;
@@ -36,7 +53,7 @@
     border: 1px solid $colorForBorderInForm;
     margin: 40px 0 20px 0;
     padding: 11px;
-    width: 96%;
+    width: 100%;
     height: 100px;
     resize: none;
   }

@@ -7,7 +7,7 @@ import {ContactsData} from './form/contactsData/ContactsData';
 
 export const Contacts = () => {
     return (
-        <div className={s.contactsBlock}>
+        <div className={s.contactsBlock} id='contacts'>
             <div className={s.contactsContainer}>
                 <Title text={'GET IN TOUCH'}/>
                 <div className={s.formAndData}>

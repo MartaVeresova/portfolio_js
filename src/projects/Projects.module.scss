@@ -11,6 +11,8 @@
     @include container();
 
     .projects {
+
+      //@include flexable(space-between, flex-start, column);
       column-count: 4;
       margin: 60px 100px 0;
 
@@ -29,5 +31,25 @@
         margin: 60px 0 0;
       }
     }
+
+    //.projects {
+    //  column-count: 4;
+    //  margin: 60px 100px 0;
+    //
+    //  @media only screen and (max-width: 579px) {
+    //    column-count: 1;
+    //    margin: 60px 20px 0;
+    //  }
+    //
+    //  @media only screen and (min-width: 580px) and (max-width: 830px) {
+    //    column-count: 2;
+    //    margin: 60px 20px 0;
+    //  }
+    //
+    //  @media only screen and (min-width: 831px) and (max-width: 1330px) {
+    //    column-count: 3;
+    //    margin: 60px 0 0;
+    //  }
+    //}
   }
 }

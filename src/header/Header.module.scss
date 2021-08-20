@@ -1,6 +1,6 @@
 @import './../common/styles/sass/mixins';
 
 .header {
-  height: 80px;
+  height: 50px;
   @include flexable(flex-end, center, none);
 }

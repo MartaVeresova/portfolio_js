@@ -12,7 +12,7 @@ export const Footer = () => {
     ]
 
     return (
-        <div className={s.footerBlock}>
+        <div className={s.footerBlock} id='footer'>
             <p className={s.rights}>©2021, All Rights Reserved.</p>
             <ul>
                 {items.map((e, i) =>

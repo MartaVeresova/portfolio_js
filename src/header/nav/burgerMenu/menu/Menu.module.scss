@@ -20,7 +20,7 @@
   top: 0;
   right: 0;
   transition: all 0.4s ease 0s;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 700px) {
       width: 250px;
   }
 }
@@ -43,7 +43,7 @@
     transition: all 0.3s ease 0s;
 
     &:hover {
-      color: #fff;
+      color: #1f1f20;
     }
   }
 
@@ -59,7 +59,7 @@
   .items {
     width: 100%;
     font-size: 1.5rem;
-    color: $textColorH3;
+    color: $textColorH3ForBurgerMenu;
 
     .oneItem {
       width: 100%;
@@ -69,19 +69,21 @@
       .link {
         display: block;
         padding: 13px 0;
-        @include text($textColorH3, 14px, 650, 14px, normal);
+        @include text($textColorH3ForBurgerMenu, 14px, 650, 14px, normal);
         text-decoration: none;
         text-transform: uppercase;
         cursor: pointer;
         transition: all 0.3s ease;
 
         &:hover {
-          background: #000000 none repeat scroll 0 0;
+          @include text($backgroundColor, 14px, 650, 14px, normal);
+          background: #252527 none repeat scroll 0 0;
         }
       }
 
       .active {
-        background: #000000 none repeat scroll 0 0;
+        background: #252527 none repeat scroll 0 0;
+        color: $backgroundColor;
       }
     }
   }

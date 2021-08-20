@@ -4,6 +4,7 @@
 
 .mainBlock {
   min-height: 100vh;
+  padding: 10px 0;
   @include flexable(space-between, center, column);
 
   .container {

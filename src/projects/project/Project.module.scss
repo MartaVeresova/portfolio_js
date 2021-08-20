@@ -32,7 +32,7 @@
         padding: 15px;
 
         h3 {
-          @include text($textColorH3, 24px, 650, 26px, 0.40px);
+          @include text($textColorPAndBtn, 24px, 650, 26px, 0.40px);
           text-transform: uppercase;
         }
 
@@ -50,7 +50,8 @@
           text-transform: uppercase;
           padding: 8px 12px;
           cursor: pointer;
-          @include text($textColorPAndBtn, 14px, 600, 1.42857143, normal);
+          //margin: 20px;
+          @include text($textColorPAndBtn, 14px, 600, 3, normal);
 
           &:hover {
             background-color: #252527;

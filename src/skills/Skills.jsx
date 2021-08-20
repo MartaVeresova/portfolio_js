@@ -7,7 +7,7 @@ import {faSketch} from "@fortawesome/free-brands-svg-icons";
 
 export const Skills = () => {
     return (
-        <div className={s.skillsBlock}>
+        <div className={s.skillsBlock} id='skills'>
             <div className={s.skillsContainer}>
                 <Title text={'My Skills'}/>
                 <div className={s.skills}>
