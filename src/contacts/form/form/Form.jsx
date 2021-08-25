@@ -5,7 +5,7 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {SendMessageModal} from "./modal/SendMessageModal";
 import {faCheck, faTimes} from "@fortawesome/free-solid-svg-icons";
-import { CircleToBlockLoading } from 'react-loadingg';
+import {CircleToBlockLoading} from 'react-loadingg';
 
 
 export const Form = () => {
@@ -51,7 +51,7 @@ export const Form = () => {
         <>
 
             <div className={s.sendMessageModal}>
-                {req &&  <CircleToBlockLoading style={{color: 'white'}}/>}
+                {req && <CircleToBlockLoading style={{color: 'white'}}/>}
                 {
                     passedModal &&
                     <SendMessageModal
@@ -109,12 +109,12 @@ export const Form = () => {
                 {/*{formik.touched.message && formik.errors.message*/}
                 {/*&& <div>{formik.errors.message}</div>}*/}
 
-                <button className={s.btn}
-                        type='submit'
-                        disabled={!formik.isValid}
-                >
-                    Send Message
-                </button>
+                <input className={s.btn}
+                       type='submit'
+                       disabled={!formik.isValid}
+                       value={'Send Message'}
+                />
+
             </form>
         </>
     )

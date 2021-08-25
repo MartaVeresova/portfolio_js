@@ -18,8 +18,8 @@ export const Nav = () => {
                         to={item}
                         spy={true}
                         smooth={true}
-                        offset={-99}
-                        duration={500}
+                        offset={-59}
+                        duration={800}
                     >
                         {item}
                     </Link>

@@ -8,7 +8,6 @@ export const Footer = () => {
         {href: 'https://www.linkedin.com/in/marta-veresova/', title: 'linkedIn'},
         {href: 'https://github.com/MartaVeresova', title: 'git'},
         {href: 'https://www.codewars.com/users/MartaVeresova', title: 'codewars'},
-        {href: 'https://martaveresovaa@gmail.com', title: 'email'},
     ]
 
     return (
