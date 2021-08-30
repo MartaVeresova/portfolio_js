@@ -11,7 +11,6 @@ export const Main = () => {
                 <div className={s.greeting}>
                     <h5>Hello, my name is</h5>
                     <h1>Marta Veresova</h1>
-                    {/*<h5>Frontend Developer based in #Minsk</h5>*/}
                     <ReactTypingEffect
                         text='Frontend Developer'
                         typingDelay={1000}

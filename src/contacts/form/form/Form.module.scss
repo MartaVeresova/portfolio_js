@@ -1,6 +1,7 @@
 @import './../../../common/styles/sass/variables';
 @import './../../../common/styles/sass/mixins';
 
+
 .sendMessageModal {
   position: absolute;
 }
@@ -26,19 +27,6 @@
       font-family: $textFontFamily;
       width: 47%;
     }
-
-    //input[type="text"]::-webkit-input-placeholder:invalid {
-    //  color: red;
-    //}
-    //
-    //input[type="text"]::-moz-placeholder {
-    //  color: red;
-    //}
-    //
-    //input[type='email']:valid { color: $colorForForm; }
-    //input[type='email']:invalid { color: red; }
-    //
-
 
     &:active, :hover, :focus {
       outline: none;
@@ -74,7 +62,6 @@
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
     cursor: pointer;
-
 
     &:hover {
       @include text($textColorH1, 14px, 400, 40px, normal);

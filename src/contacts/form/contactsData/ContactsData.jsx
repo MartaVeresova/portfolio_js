@@ -6,20 +6,19 @@ import {DataBlock} from './dataBlock/DataBlock';
 
 
 export const ContactsData = () => {
+
+    const dataBlock = [
+        {iconTitle: faTelegramPlane, contactTitle: 'Phone', data: '+375-29-599-54-66', a: 'tel:+375-29-599-54-66'},
+        {iconTitle: faEnvelope, contactTitle: 'Email', data: 'martaveresovaa@gmail.com', a: ''},
+        {iconTitle: faHome, contactTitle: 'My Location', data: 'Minsk, Belarus', a: ''},
+    ]
+
     return (
         <div className={s.data}>
-            <DataBlock iconTitle={faTelegramPlane}
-                       contactTitle='Phone'
-                       data='+375-29-599-54-66'
-                       a='tel:+375-29-599-54-66'/>
-            <DataBlock iconTitle={faEnvelope}
-                       contactTitle='Email'
-                       data='martaveresovaa@gmail.com'
-                       a=''/>
-            <DataBlock iconTitle={faHome}
-                       contactTitle='My Location'
-                       data='Minsk, Belarus'
-                       a=''/>
+            {dataBlock.map(d => <DataBlock iconTitle={d.iconTitle}
+                                           contactTitle={d.contactTitle}
+                                           data={d.data}
+                                           a={d.a}/>)}
         </div>
     );
 }

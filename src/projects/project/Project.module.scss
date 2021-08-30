@@ -50,7 +50,6 @@
           text-transform: uppercase;
           padding: 8px 12px;
           cursor: pointer;
-          //margin: 20px;
           @include text($textColorPAndBtn, 14px, 600, 3, normal);
 
           &:hover {

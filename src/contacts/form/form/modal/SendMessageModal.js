@@ -13,15 +13,12 @@ export const SendMessageModal = ({icon, title, text, setActiveModal, activeModal
             <div className={`${activeModal ? `${s.modal} ${s.modalActive}` : s.modal}`} onClick={onClickHandler}>
                 <div className={`${activeModal ? `${s.modalContent} ${s.activeContent}` : s.modalContent}`}
                      onClick={onClickStopPropagation}>
-
                     <div className={s.header}>
                         <h4>
                             <FontAwesomeIcon className={s.icon} icon={icon}/>{title}
                         </h4>
                         <p>{text}</p>
                     </div>
-
-
                 </div>
             </div>
         </div>

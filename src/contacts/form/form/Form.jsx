@@ -4,9 +4,9 @@ import axios from "axios";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {SendMessageModal} from "./modal/SendMessageModal";
-import {faCheck, faTimes} from "@fortawesome/free-solid-svg-icons";
-import {CircleToBlockLoading} from 'react-loadingg';
-
+import {faCheck} from "@fortawesome/free-solid-svg-icons";
+import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import WaveLoading from 'react-loadingg/lib/WaveLoading';
 
 export const Form = () => {
 
@@ -49,37 +49,20 @@ export const Form = () => {
 
     return (
         <>
-
+            {req && <WaveLoading style={{position: 'fixed', right: '50%', top: '50%'}} color={'#ffffff'}/>}
             <div className={s.sendMessageModal}>
-                {req && <CircleToBlockLoading style={{color: 'white'}}/>}
-                {
-                    passedModal &&
-                    <SendMessageModal
-                        icon={faCheck}
-                        title='Your message was sent.'
-                        text='Thank you.'
-                        setActiveModal={setPassedModal}
-                        activeModal={passedModal}
-                    />
-                }
-                {
-                    failedModal &&
-                    <SendMessageModal
-                        icon={faTimes}
-                        title='Your message was not sent.'
-                        text='Try again later.'
-                        setActiveModal={setFailedModal}
-                        activeModal={failedModal}
-                    />
-                }
-
+                <SendMessageModal
+                    icon={passedModal ? faCheck : failedModal ? faTimes : null}
+                    title={passedModal ? 'Your message was sent.' : failedModal ? 'Your message was not sent.' : null}
+                    text={passedModal ? 'Thank you.' : failedModal ? 'Try again later.' : null}
+                    setActiveModal={passedModal ? setPassedModal : failedModal ? setFailedModal : null}
+                    activeModal={passedModal || failedModal}
+                />
             </div>
 
             <form className={s.form} onSubmit={formik.handleSubmit} noValidate>
                 <div className={s.inputBlock}>
                     <input
-                        // required
-                        // pattern="[A-Z, a-z, А-Я, а-я]{2,20}"
                         id='name'
                         type='text'
                         placeholder={formik.touched.name && formik.errors.name ? formik.errors.name : 'Your Name'}
@@ -91,7 +74,7 @@ export const Form = () => {
                     <input
                         id='email'
                         type='email'
-                        placeholder='example@gmail.com'
+                        placeholder={formik.touched.email && formik.errors.email ? formik.errors.email : 'example@gmail.com'}
                         {...formik.getFieldProps('email')}
 
                     />
@@ -102,7 +85,7 @@ export const Form = () => {
 
                 <textarea
                     id='message'
-                    placeholder='Your Message'
+                    placeholder={formik.touched.message && formik.errors.message ? formik.errors.message : 'Your message'}
                     {...formik.getFieldProps('message')}
 
                 />
@@ -111,7 +94,6 @@ export const Form = () => {
 
                 <input className={s.btn}
                        type='submit'
-                       disabled={!formik.isValid}
                        value={'Send Message'}
                 />
 
