@@ -43,8 +43,8 @@ export const Menu = ({header, items, active, setActive}) => {
                                 to={item}
                                 spy={true}
                                 smooth={true}
-                                offset={-99}
-                                duration={500}
+                                offset={-59}
+                                duration={800}
                             >
                                 {item}
                             </Link>
