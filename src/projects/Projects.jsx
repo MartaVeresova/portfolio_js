@@ -25,6 +25,7 @@ export const Projects = () => {
             title: 'Currency exchange',
             img: imgFive,
             description: 'TS, Redux',
+
             link: 'https://martaveresova.github.io/Currency_exchange/',
         },
         {

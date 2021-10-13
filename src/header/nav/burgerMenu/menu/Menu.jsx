@@ -45,6 +45,7 @@ export const Menu = ({header, items, active, setActive}) => {
                                 smooth={true}
                                 offset={-59}
                                 duration={800}
+                                onClick={onClick}
                             >
                                 {item}
                             </Link>
