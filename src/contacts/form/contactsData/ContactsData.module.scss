@@ -1,4 +1,4 @@
-@import './../../../common/styles/sass/mixins';
+@import '../../../common/styles/scss/mixins';
 
 .data {
   @include flexable(flex-start, center, column);
