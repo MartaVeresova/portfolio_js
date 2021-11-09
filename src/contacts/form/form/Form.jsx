@@ -4,8 +4,7 @@ import axios from "axios";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {SendMessageModal} from "./modal/SendMessageModal";
-import {faCheck} from "@fortawesome/free-solid-svg-icons";
-import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import {faCheck, faTimes} from "@fortawesome/free-solid-svg-icons";
 import WaveLoading from 'react-loadingg/lib/WaveLoading';
 
 export const Form = () => {
@@ -32,7 +31,7 @@ export const Form = () => {
         }),
         onSubmit: values => {
             setReq(true)
-            axios.post('http://smtp-nodejs-server-gmail-form.herokuapp.com/sendMessage', values)
+            axios.post('https://smtp-nodejs-server-gmail-form.herokuapp.com/sendMessage', values)
                 .then(() => {
                     setPassedModal(true)
                 })

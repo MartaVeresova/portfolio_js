@@ -15,7 +15,8 @@ export const ContactsData = () => {
 
     return (
         <div className={s.data}>
-            {dataBlock.map(d => <DataBlock iconTitle={d.iconTitle}
+            {dataBlock.map(d => <DataBlock key={d.data}
+                                           iconTitle={d.iconTitle}
                                            contactTitle={d.contactTitle}
                                            data={d.data}
                                            a={d.a}/>)}
