@@ -13,6 +13,10 @@ export const Form = () => {
     const [failedModal, setFailedModal] = useState(false)
     const [req, setReq] = useState(false)
 
+    const instance = axios.create({
+        withCredentials: true,
+    })
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -31,19 +35,28 @@ export const Form = () => {
         }),
         onSubmit: values => {
             setReq(true)
-            axios.post('https://smtp-nodejs-server-gmail-form.herokuapp.com/sendMessage', values)
-                .then(() => {
-                    setPassedModal(true)
+            // instance.post('https://smtp-nodejs-server-gmail-form.herokuapp.com/sendMessage', values)
+            instance.get('https://smtp-nodejs-server-gmail-form.herokuapp.com/')
+                .then((res) => {
+                    console.log(res)
                 })
-                .catch(() => {
-                    setFailedModal(true)
+                .catch((err) => {
+                    console.log(err)
                 })
-                .finally(() => {
+
+                // .then(() => {
+                //     setPassedModal(true)
+                // })
+                // .catch(() => {
+                //     setFailedModal(true)
+                // })
+                // .finally(() => {
                     setReq(false)
-                })
+                // })
             formik.resetForm()
         },
     })
+
 
 
     return (
@@ -51,10 +64,10 @@ export const Form = () => {
             {req && <WaveLoading style={{position: 'fixed', right: '50%', top: '50%'}} color={'#ffffff'}/>}
             <div className={s.sendMessageModal}>
                 <SendMessageModal
-                    icon={passedModal ? faCheck : failedModal ? faTimes : null}
-                    title={passedModal ? 'Your message was sent.' : failedModal ? 'Your message was not sent.' : null}
-                    text={passedModal ? 'Thank you.' : failedModal ? 'Try again later.' : null}
-                    setActiveModal={passedModal ? setPassedModal : failedModal ? setFailedModal : null}
+                    icon={passedModal ? faCheck : faTimes}
+                    title={passedModal ? 'Your message was sent.' : 'Your message was not sent.'}
+                    text={passedModal ? 'Thank you.' : 'Try again later.'}
+                    setActiveModal={passedModal ? setPassedModal : setFailedModal}
                     activeModal={passedModal || failedModal}
                 />
             </div>
