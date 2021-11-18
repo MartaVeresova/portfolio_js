@@ -14,7 +14,7 @@ export const Form = () => {
     const [req, setReq] = useState(false)
 
     const instance = axios.create({
-        withCredentials: true,
+        withCredentials: false,
     })
 
     const formik = useFormik({
@@ -35,28 +35,19 @@ export const Form = () => {
         }),
         onSubmit: values => {
             setReq(true)
-            // instance.post('https://smtp-nodejs-server-gmail-form.herokuapp.com/sendMessage', values)
-            instance.get('https://smtp-nodejs-server-gmail-form.herokuapp.com/')
-                .then((res) => {
-                    console.log(res)
+            instance.post('https://smtp-nodejs-server-gmail-form.herokuapp.com/sendMessage', values)
+                .then(() => {
+                    setPassedModal(true)
                 })
-                .catch((err) => {
-                    console.log(err)
+                .catch(() => {
+                    setFailedModal(true)
                 })
-
-                // .then(() => {
-                //     setPassedModal(true)
-                // })
-                // .catch(() => {
-                //     setFailedModal(true)
-                // })
-                // .finally(() => {
+                .finally(() => {
                     setReq(false)
-                // })
+                })
             formik.resetForm()
         },
     })
-
 
 
     return (
